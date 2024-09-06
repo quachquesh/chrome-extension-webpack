@@ -1,0 +1,34 @@
+{
+  "name": "Test Extension",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "description": "Chrome extension",
+  "homepage_url": "https://github.com/pmarks-net/ipvfoo",
+  "icons": {
+    "16": "/assets/icons/icon16.png",
+    "128": "/assets/icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "/assets/icons/icon16.png",
+      "128": "/assets/icons/icon128.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "My basic Chrome extension"
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "webNavigation",
+    "webRequest",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": ["*://*/*"]
+}
